@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111c">
+  <title>Blind People Free Fire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Blind People Free Fire</h1>
+  <p>Offline Accessible Battle Game</p>
+  <p>Frontend Developer: Dashrath Babu</p>
+  <p>Junior Developer: Umakant Das</p>
+</header>
+
+<main>
+
+  <section class="panel hud" aria-label="गेम की जानकारी">
+    <p>Player: <strong id="playerDisplay">Soldier</strong></p>
+    <p>Diamonds: <strong id="diamonds">1000</strong></p>
+    <p>Health: <strong id="health">100</strong></p>
+    <p>Ammo: <strong id="ammo">12</strong></p>
+    <p>Reserve Ammo: <strong id="reserveAmmo">60</strong></p>
+    <p>Weapon: <strong id="weaponName">Pistol</strong></p>
+    <p>Enemies: <strong id="enemyCount">0</strong></p>
+    <p>Level: <strong id="level">1</strong></p>
+  </section>
+
+  <section class="panel">
+    <h2>Player Account</h2>
+    <label for="playerName">अपना नाम लिखें</label>
+    <input id="playerName" maxlength="24"
+           placeholder="Player Name">
+    <button id="createAccountBtn" type="button">
+      Create Account
+    </button>
+    <p id="accountStatus" aria-live="polite">
+      अपना ऑफलाइन अकाउंट बनाएँ।
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>Battlefield</h2>
+
+    <p id="status" role="status" aria-live="polite">
+      स्वागत है सैनिक। Start Mission दबाएँ।
+    </p>
+
+    <p id="directionStatus" aria-live="polite">
+      दुश्मन की दिशा अभी पता नहीं है।
+    </p>
+
+    <button id="startBtn" type="button">Start Mission</button>
+    <button id="scanBtn" type="button">Scan Enemy और Compass</button>
+    <button id="fireBtn" type="button">Fire Weapon</button>
+    <button id="reloadBtn" type="button">Reload Weapon</button>
+    <button id="medBtn" type="button">Use Medicine</button>
+    <button id="grenadeBtn" type="button">Throw Grenade</button>
+    <button id="switchWeaponBtn" type="button">Switch Weapon</button>
+    <button id="storeBtn" type="button">Open Gun Store</button>
+    <button id="helpBtn" type="button">Help and Controls</button>
+  </section>
+
+  <section class="panel">
+    <h2>Movement Controls</h2>
+    <p>हर बटन दबाने पर खिलाड़ी एक कदम चलेगा।</p>
+
+    <div class="movement-grid">
+      <span></span>
+      <button id="moveForward" type="button">आगे चलें</button>
+      <span></span>
+
+      <button id="moveLeft" type="button">बाएँ चलें</button>
+      <button id="moveBackward" type="button">पीछे चलें</button>
+      <button id="moveRight" type="button">दाएँ चलें</button>
+    </div>
+
+    <p id="positionStatus" aria-live="polite">
+      आपकी स्थिति: 0, 0
+    </p>
+  </section>
+
+  <section class="panel" id="store" hidden>
+    <h2>Gun Store</h2>
+    <p>हथियार खरीदने के लिए बटन दबाएँ।</p>
+    <div id="storeItems"></div>
+    <button id="closeStoreBtn" type="button">Close Store</button>
+  </section>
+
+  <section class="panel" id="help" hidden>
+    <h2>Help and Controls</h2>
+    <p>Start Mission: मिशन शुरू करें।</p>
+    <p>Movement: आगे, पीछे, बाएँ और दाएँ चलें।</p>
+    <p>Scan Enemy: दुश्मन की दिशा और दूरी सुनें।</p>
+    <p>Fire: दुश्मन पर गोली चलाएँ।</p>
+    <p>Reload: गोलियाँ भरें।</p>
+    <p>Medicine: Health बढ़ाएँ।</p>
+    <p>Grenade: आसपास के दुश्मनों को नुकसान पहुँचाएँ।</p>
+    <p>Switch Weapon: खरीदे हुए हथियार बदलें।</p>
+    <p>यह शुरुआती Offline गेम प्रोटोटाइप है।</p>
+    <button id="closeHelpBtn" type="button">Close Help</button>
+  </section>
+
+  <section class="panel">
+    <h2>Achievements</h2>
+    <p id="achievementStatus" aria-live="polite">
+      अभी कोई Achievement पूरी नहीं हुई।
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>Game Messages</h2>
+    <div id="gameLog" aria-live="polite">
+      गेम तैयार है।
+    </div>
+  </section>
+
+  <div id="gamePopup" class="game-popup"
+       role="alert" aria-live="assertive" hidden>
+    <p id="popupMessage"></p>
+    <button id="closePopupBtn" type="button">बंद करें</button>
+  </div>
+
+</main>
+
+<footer>
+  <p>Blind People Free Fire - Offline Prototype</p>
+  <p>Frontend Developer: Dashrath Babu</p>
+  <p>Junior Developer: Umakant Das</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

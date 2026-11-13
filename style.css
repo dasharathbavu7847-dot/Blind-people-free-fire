@@ -1,0 +1,304 @@
+/* ==================================
+   BLIND PEOPLE FREE FIRE
+   Developer: Dashrath Babu
+   Junior Developer: Umakant Das
+================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #07111c;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* HEADER */
+
+header {
+  background: linear-gradient(135deg, #102b45, #06101b);
+  padding: 22px 14px;
+  border-bottom: 3px solid #00d9ff;
+}
+
+h1 {
+  color: #00d9ff;
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+header p {
+  margin: 5px;
+  color: #d7efff;
+}
+
+/* MAIN AREA */
+
+main {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  padding: 12px;
+}
+
+/* PANELS */
+
+.panel {
+  background: #102030;
+  border: 2px solid #29485f;
+  border-radius: 15px;
+  padding: 17px;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.panel h2 {
+  color: #00d9ff;
+  font-size: 23px;
+  margin-top: 5px;
+}
+
+/* GAME HUD */
+
+.hud {
+  background: #132536;
+  border-color: #00d9ff;
+}
+
+.hud p {
+  display: inline-block;
+  background: #07111c;
+  padding: 9px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #29485f;
+}
+
+.hud strong {
+  color: #ffdf4d;
+}
+
+/* INPUT */
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  width: 100%;
+  min-height: 56px;
+  margin: 10px 0;
+  padding: 12px;
+  background: #ffffff;
+  color: #111111;
+  border: 3px solid #00d9ff;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* ALL BUTTONS */
+
+button {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  margin: 10px 0;
+  padding: 13px;
+  background: #087da8;
+  color: #ffffff;
+  border: 2px solid #00d9ff;
+  border-radius: 11px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:active {
+  background: #00a9d4;
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background: #555555;
+  border-color: #777777;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* KEYBOARD AND TALKBACK FOCUS */
+
+button:focus-visible,
+input:focus-visible {
+  outline: 4px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* GAME STATUS */
+
+#status,
+#directionStatus,
+#accountStatus,
+#positionStatus,
+#achievementStatus,
+#gameLog {
+  min-height: 52px;
+  padding: 13px;
+  margin: 10px 0;
+  background: #07111c;
+  border: 1px solid #29485f;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+/* MOVEMENT CONTROLS */
+
+.movement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 440px;
+  margin: 15px auto;
+}
+
+.movement-grid button {
+  min-height: 75px;
+  margin: 0;
+  background: #145c9e;
+  font-size: 19px;
+}
+
+/* SPECIAL GAME BUTTONS */
+
+#fireBtn {
+  background: #a51f1f;
+  border-color: #ff7070;
+}
+
+#grenadeBtn {
+  background: #8d4215;
+  border-color: #ffbd57;
+}
+
+#reloadBtn {
+  background: #805000;
+  border-color: #ffca28;
+}
+
+#medBtn {
+  background: #176b39;
+  border-color: #60e890;
+}
+
+/* STORE */
+
+#store {
+  border-color: #ffca28;
+}
+
+#storeItems button {
+  background: #174b75;
+}
+
+/* HELP */
+
+#help {
+  border-color: #00d9ff;
+}
+
+#help p {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #29485f;
+}
+
+/* POPUP MESSAGE */
+
+.game-popup {
+  position: fixed;
+  z-index: 9999;
+  top: 25%;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 22px;
+  background: #172b3c;
+  color: #ffffff;
+  border: 3px solid #00d9ff;
+  border-radius: 16px;
+  font-size: 20px;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.75);
+}
+
+#popupMessage {
+  font-weight: bold;
+}
+
+/* HIDDEN SECTIONS */
+
+[hidden] {
+  display: none !important;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 20px;
+  color: #a9c7d8;
+  background: #06101b;
+  border-top: 2px solid #29485f;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 23px;
+  }
+
+  main {
+    padding: 8px;
+  }
+
+  .panel {
+    padding: 12px;
+  }
+
+  button {
+    min-height: 62px;
+    font-size: 17px;
+  }
+
+  .movement-grid button {
+    min-height: 70px;
+    font-size: 17px;
+  }
+}
+
+/* REDUCE MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  button:active {
+    transform: none;
+  }
+}
