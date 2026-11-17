@@ -1,0 +1,349 @@
+
+/* =========================================
+   BATTLE FRONTLINE
+   Professional Gaming CSS
+   Accessible Design for Blind Users
+   Developer: Dashrath Babu
+========================================= */
+
+:root {
+    --bg: #080d19;
+    --surface: #111a2c;
+    --surface-light: #1b2940;
+    --primary: #00e5ff;
+    --primary-hover: #00b8d4;
+    --danger: #ff3d3d;
+    --success: #00e676;
+    --warning: #ffd740;
+    --text: #f4f7ff;
+    --muted: #b8c5d9;
+    --border: #344968;
+}
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+/* MAIN BODY */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 14px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 24px 14px;
+    margin-bottom: 22px;
+    background: linear-gradient(135deg, #111a2c, #182b46);
+    border: 2px solid var(--primary);
+    border-radius: 18px;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.12);
+}
+
+header h1 {
+    color: var(--primary);
+    font-size: 32px;
+    font-weight: 900;
+    margin: 8px 0;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: var(--muted);
+    margin: 5px 0;
+}
+
+/* HEADINGS */
+
+h1, h2, h3 {
+    color: var(--primary);
+    line-height: 1.4;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin: 10px 0 20px;
+}
+
+h3 {
+    font-size: 21px;
+    margin-top: 24px;
+}
+
+/* SECTIONS */
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 18px 0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+}
+
+section[hidden] {
+    display: none !important;
+}
+
+/* BUTTONS */
+
+button {
+    display: block;
+    width: 100%;
+    min-height: 58px;
+    margin: 12px 0;
+    padding: 15px;
+    background: #1769e0;
+    color: #ffffff;
+    border: 2px solid #5294ff;
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+button:hover {
+    background: #287fff;
+}
+
+button:active {
+    background: #104bb0;
+    transform: scale(0.99);
+}
+
+/* MAIN MENU */
+
+#menu {
+    border-color: var(--primary);
+}
+
+#menu button {
+    background: #182f4d;
+    border-color: #00bcd4;
+}
+
+#menu button:hover {
+    background: #23476e;
+}
+
+/* BATTLEFIELD */
+
+#battle {
+    background: #090e17;
+    border: 2px solid var(--danger);
+    box-shadow: 0 0 20px rgba(255, 61, 61, 0.12);
+}
+
+#battle h2 {
+    color: #ff5252;
+}
+
+#battle button {
+    background: #9f2020;
+    border-color: #ff5252;
+}
+
+#battle button:hover {
+    background: #c62828;
+}
+
+#battle button:active {
+    background: #761515;
+}
+
+/* HEALTH AND GAME STATUS */
+
+#health {
+    color: var(--success);
+    font-weight: bold;
+}
+
+#ammo {
+    color: var(--warning);
+    font-weight: bold;
+}
+
+#enemies {
+    color: #ff7676;
+    font-weight: bold;
+}
+
+#gold {
+    color: #ffd740;
+    font-weight: bold;
+}
+
+#status,
+#serverStatus,
+#roomStatus,
+#shopStatus {
+    padding: 12px;
+    margin: 14px 0;
+    background: #080d19;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* INPUTS */
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 54px;
+    margin: 10px 0;
+    padding: 14px;
+    background: #080d19;
+    color: #ffffff;
+    border: 2px solid #53657d;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: #aebbd0;
+    opacity: 1;
+}
+
+select option {
+    background: #111a2c;
+    color: white;
+}
+
+/* LABELS */
+
+label {
+    display: block;
+    margin-top: 14px;
+    color: var(--warning);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ACCESSIBILITY FOCUS */
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 4px solid #ffff00;
+    outline-offset: 4px;
+}
+
+/* TEXT */
+
+p {
+    line-height: 1.7;
+}
+
+strong {
+    color: var(--warning);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 22px 10px;
+    margin-top: 20px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+
+/* LINKS */
+
+a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 3px solid yellow;
+    outline-offset: 3px;
+}
+
+/* RESPONSIVE MOBILE DESIGN */
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+        font-size: 17px;
+    }
+
+    header {
+        padding: 18px 10px;
+        border-radius: 14px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 14px;
+        margin: 12px 0;
+        border-radius: 12px;
+    }
+
+    button {
+        min-height: 60px;
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+        min-height: 56px;
+        font-size: 18px;
+    }
+}
+
+/* REDUCE ANIMATION FOR ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
